@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  mongo:
+    build: ./db_docker
+    container_name: mongo
+
+  app:
+    build: .
+    depends_on:
+      - mongo
